@@ -1,4 +1,4 @@
-const projects = [
+export const projects = [
   {
     title: "E-commerce Platform",
     description:
@@ -30,4 +30,25 @@ const projects = [
   }
 ];
 
-export default projects;
+export const testimonials = [
+  {
+    name: "Ofgeha Gelana",
+    role: "Senior Developer, Tech Solutions",
+    feedback:
+      "Sifan is a passionate and detail-oriented software engineer. Her ability to learn quickly and solve complex problems is impressive.",
+    
+    
+    telegram: "https://t.me/Ofgeha",
+  },
+  {
+    name: "Sura Etana",
+    role: "Teammate, AI Project",
+    feedback:
+      "Sifan’s technical skillset, teamwork, and communication made our AI project run smoothly. She’s a reliable and talented developer.",
+    telegram: "https://t.me/surraa777",
+    
+  }
+  
+  
+];
+

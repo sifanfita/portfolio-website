@@ -5,7 +5,7 @@ import About from './pages/About.jsx'
 import Contact from './pages/Contact.jsx'
 import Portfolio from './pages/Portfolio.jsx'
 
-import Testimonies from './pages/Testimonies.jsx'
+import Testimonials from './pages/Testimonials.jsx'
 import Navbar from './components/Navbar.jsx'
 import Footer from './components/Footer.jsx'
 
@@ -18,8 +18,8 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/portfolio" element={<Portfolio />} />
-       
-        <Route path='/testimonies' element={<Testimonies />} />
+
+        <Route path='/testimonials' element={<Testimonials />} />
       </Routes>
       <Footer />
     </div>
