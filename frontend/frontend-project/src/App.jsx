@@ -4,7 +4,7 @@ import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
 import Contact from './pages/Contact.jsx'
 import Portfolio from './pages/Portfolio.jsx'
-import TechStacks from './pages/TechStacks.jsx'
+
 import Testimonies from './pages/Testimonies.jsx'
 import Navbar from './components/Navbar.jsx'
 import Footer from './components/Footer.jsx'
@@ -18,7 +18,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/portfolio" element={<Portfolio />} />
-        <Route path='/techstacks' element={<TechStacks />} />
+       
         <Route path='/testimonies' element={<Testimonies />} />
       </Routes>
       <Footer />

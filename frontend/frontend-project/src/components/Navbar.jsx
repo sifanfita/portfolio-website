@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const links = ["Home", "About", "Portfolio", "TechStacks", "Testimonies", "Contact"];
+  const links = ["Home", "About", "Portfolio", "Testimonies", "Contact"];
 
   return (
     <nav className="w-full bg-black text-yellow-100 shadow-sm sticky top-0 z-40">
