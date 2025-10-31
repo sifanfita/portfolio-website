@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import emailjs from "emailjs-com";
+import { useRef } from "react";
+
 
 const Contact = () => {
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  
+  const form = useRef();
+
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -40,7 +44,7 @@ const Contact = () => {
           I’d love to hear from you! Whether you want to collaborate or just say hi.
         </p>
 
-        <form onSubmit={sendEmail} className="space-y-6 max-w-xl mx-auto">
+        <form ref={form} onSubmit={sendEmail} className="space-y-6 max-w-xl mx-auto">
           <input
             type="text"
             name="name"
@@ -57,7 +61,7 @@ const Contact = () => {
             placeholder="Your Email"
             value={form.email}
             onChange={handleChange}
-            className="w-full p-3 rounded-md bg-slate-900 text-yellow-100 focus:ring-2 focus:ring-yellow-200 outline-none"
+            className="w-full p-3 rounded-md bg-slate-900 text-yellow-100 focus:ring-2 focus:ring-yellow-200 outline-none focus:bg-slate-900"
             required
           />
 
