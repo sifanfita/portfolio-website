@@ -18,7 +18,7 @@ const Home = () => {
 
           <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
             <Link
-              to="/projects"
+              to="/portfolio"
               className="bg-yellow-200 hover:bg-yellow-400 text-black px-6 py-3 rounded-md font-medium transition-colors"
             >
               View Projects

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
+import emailjs from "emailjs-com";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -8,12 +9,28 @@ const Contact = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form submitted:", form);
-    alert("Thank you for reaching out!");
-    setForm({ name: "", email: "", message: "" });
-  };
+  const sendEmail = (e) => {
+  e.preventDefault();
+
+  emailjs
+    .sendForm(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      form.current,
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    )
+    .then(
+      (result) => {
+        console.log("Message sent:", result.text);
+        alert("Message sent successfully!");
+      },
+      (error) => {
+        console.error("Error:", error.text);
+        alert("Failed to send message.");
+      }
+    );
+};
+
 
   return (
     <section id="contact" className="bg-black text-yellow-100 py-16 px-6">
@@ -23,7 +40,7 @@ const Contact = () => {
           I’d love to hear from you! Whether you want to collaborate or just say hi.
         </p>
 
-        <form onSubmit={handleSubmit} className="space-y-6 max-w-xl mx-auto">
+        <form onSubmit={sendEmail} className="space-y-6 max-w-xl mx-auto">
           <input
             type="text"
             name="name"
